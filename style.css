@@ -60,23 +60,23 @@ h6 {
    overflow-wrap: break-word;
 }
 
-/*
-  8. Create a root stacking context
-*/
-#root,
-#__next {
-   isolation: isolate;
-}
-
 
 /* ------------------------------------------------------------------ STYLES */
 
 html {
+   height: 100%;
    font-family: 'Open Sans', sans-serif;
    font-size: 14px;
    color: #74797E;
    background: #F6F6F6;
+   padding: 0;
+}
+
+html,
+body {
    height: 100%;
+   width: 100%;
+   margin: 0;
 }
 
 body {
@@ -92,11 +92,9 @@ body {
    align-content: center;
    -webkit-align-items: center;
    align-items: center;
-
 }
 
 body {
-   height: 100%;
    text-align: center;
    padding: 32px;
 }
@@ -104,7 +102,6 @@ body {
 @media only screen and (max-width: 600px) {
    body {
       padding: 24px;
-      ;
    }
 }
 
@@ -153,44 +150,69 @@ h3 {
    font-size: 40px;
    color: #D15747;
    font-family: 'Josefin Sans', sans-serif;
-
    letter-spacing: 2px;
    line-height: 44px;
-   position: relative;
+   display: inline-block;
+}
+
+h3 em {
+   font-style: normal;
 }
 
 .soon {
    padding: 16px 0 48px;
+   position: relative;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
 }
 
-h3:before,
-h3:after {
-   display: block;
-   content: ' ';
+
+.soon hr {
+   display: inline-block;
    width: 60px;
-   height: 1px;
-   border-top: 1px solid #ccc;
-   position: absolute;
-   top: 50%;
-   ;
+   height: 1;
+   border-top: 1px solid #D9D9D9;
 }
 
-h3:before {
-   left: -80px;
+.soon hr:first-child {
+   margin-right: 24px;
 }
 
-h3:after {
-   right: -80px;
+.soon hr:last-child {
+   margin-left: 24px;
 }
 
 
 @media only screen and (max-width: 600px) {
+   .soon {
+      padding: 16px 0 24px;
+   }
+
+   .soon hr {
+      width: 48px;
+   }
+
+   .soon hr:first-child {
+      margin-right: 16px;
+   }
+
+   .soon hr:last-child {
+      margin-left: 16px;
+   }
+
    h3 {
       font-size: 32px;
       line-height: 38px;
-      padding: 16px 0 24px;
+   }
+
+   h3 em {
+      display: block;
    }
 }
+
+
 
 
 footer {
@@ -218,8 +240,11 @@ footer li .icon {
    padding-right: 6px;
 }
 
+
+
 #getWaitlistInnerContainer {
    padding: 0;
+   margin: 0 auto;
 }
 
 #getWaitlistInnerContainer input {
@@ -248,7 +273,7 @@ a {
 #getWaitlistInnerContainer #primaryCTA {
    background-color: #FFF !important;
    border: 1px solid #E4E4E4 !important;
-   border-left: 1px dashed #E4E4E4 !important;
+   border-left: 1px dashed #d3d3d3 !important;
    color: #D15747 !important;
    height: 44px;
    font-size: 14px;
