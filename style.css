@@ -1,0 +1,266 @@
+/* ------------------------------------------------------------------ RESET */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+   margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+   line-height: 1.5;
+   -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+   display: block;
+   max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+   font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+   isolation: isolate;
+}
+
+
+/* ------------------------------------------------------------------ STYLES */
+
+html {
+   font-family: 'Open Sans', sans-serif;
+   font-size: 14px;
+   color: #74797E;
+   background: #F6F6F6;
+   height: 100%;
+}
+
+body {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column;
+   flex-direction: column;
+   -webkit-flex-wrap: nowrap;
+   flex-wrap: nowrap;
+   -webkit-justify-content: space-between;
+   justify-content: space-between;
+   -webkit-align-content: center;
+   align-content: center;
+   -webkit-align-items: center;
+   align-items: center;
+
+}
+
+body {
+   height: 100%;
+   text-align: center;
+   padding: 32px;
+}
+
+@media only screen and (max-width: 600px) {
+   body {
+      padding: 24px;
+      ;
+   }
+}
+
+
+label {
+   display: block;
+   margin-bottom: 8px;
+   letter-spacing: 2.4px;
+}
+
+header {
+   padding: 0 0 16px;
+}
+
+main {
+   -webkit-order: 0;
+   order: 0;
+   -webkit-flex: 0 1 auto;
+   flex: 0 1 auto;
+   -webkit-align-self: auto;
+   align-self: auto;
+   text-align: center;
+}
+
+.hero {
+   text-align: center;
+   padding-bottom: 48px;
+}
+
+@media only screen and (max-width: 600px) {
+   .hero {
+      padding: 0 32px 16px;
+   }
+}
+
+.hero svg {
+   display: inline-block;
+}
+
+h1 {
+   font-size: 16px;
+   font-weight: 400;
+}
+
+h3 {
+   font-size: 40px;
+   color: #D15747;
+   font-family: 'Josefin Sans', sans-serif;
+
+   letter-spacing: 2px;
+   line-height: 44px;
+   position: relative;
+}
+
+.soon {
+   padding: 16px 0 48px;
+}
+
+h3:before,
+h3:after {
+   display: block;
+   content: ' ';
+   width: 60px;
+   height: 1px;
+   border-top: 1px solid #ccc;
+   position: absolute;
+   top: 50%;
+   ;
+}
+
+h3:before {
+   left: -80px;
+}
+
+h3:after {
+   right: -80px;
+}
+
+
+@media only screen and (max-width: 600px) {
+   h3 {
+      font-size: 32px;
+      line-height: 38px;
+      padding: 16px 0 24px;
+   }
+}
+
+
+footer {
+   padding: 16px 0 0;
+}
+
+footer ul {
+   padding: 0;
+}
+
+footer li {
+   display: inline-block;
+   list-style: none;
+}
+
+footer li+li {
+   margin-left: 12px;
+   padding-left: 12px;
+   border-left: 1px dashed #ddd;
+}
+
+footer li .icon {
+   display: inline-block;
+   vertical-align: text-bottom;
+   padding-right: 6px;
+}
+
+#getWaitlistInnerContainer {
+   padding: 0;
+}
+
+#getWaitlistInnerContainer input {
+   background-color: #FFF;
+   border-color: #E4E4E4 !important;
+   height: 44px;
+   border-right: none;
+   position: relative;
+   z-index: 1;
+   font-size: 14px;
+   color: #74797E !important;
+}
+
+#getWaitlistInnerContainer input:focus {
+   border: 1px solid #c7c7c7 !important;
+   outline: none;
+   z-index: 3;
+}
+
+a {
+   text-decoration: none;
+   color: #D15747;
+   letter-spacing: 1.2px;
+}
+
+#getWaitlistInnerContainer #primaryCTA {
+   background-color: #FFF !important;
+   border: 1px solid #E4E4E4 !important;
+   border-left: 1px dashed #E4E4E4 !important;
+   color: #D15747 !important;
+   height: 44px;
+   font-size: 14px;
+   letter-spacing: 1.2px;
+   text-transform: uppercase;
+   position: relative;
+   z-index: 2;
+   margin-left: -1px;
+}
+
+
+
+#getWaitlistInnerContainer .gw-flex.gw-flex-row.gw-justify-center .gw-text-xs {
+   display: none;
+}
