@@ -149,13 +149,13 @@
       insights.trackPages();
    </script>
    <script>
-      setTimeout(function () { delay(); }, 2000);
+      setTimeout(function () { delay(); }, 500);
       function delay(arr, num) {
          const elem = document.getElementsByTagName("input")[0];
          if (elem)
             elem.placeholder = "Introdu adresa ta de email"
          else
-            setTimeout(function () { delay(); }, 500);
+            setTimeout(function () { delay(); }, 200);
       }
    </script>
 </body>
